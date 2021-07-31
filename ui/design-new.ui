@@ -61,7 +61,7 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>-88</y>
+           <y>0</y>
            <width>1494</width>
            <height>758</height>
           </rect>
@@ -922,19 +922,6 @@ QPushButton:hover{
             <zorder>d_beam1</zorder>
             <zorder>d_beam2</zorder>
             <zorder>label_8</zorder>
-            <zorder>f_y</zorder>
-            <zorder>label_49</zorder>
-            <zorder>f_c</zorder>
-            <zorder>label_50</zorder>
-            <zorder>label_51</zorder>
-            <zorder>label_52</zorder>
-            <zorder>joint</zorder>
-            <zorder>beam1_2</zorder>
-            <zorder>column_is</zorder>
-            <zorder>label_55</zorder>
-            <zorder>label_56</zorder>
-            <zorder>label_54</zorder>
-            <zorder>frame_type</zorder>
             <zorder>start</zorder>
             <zorder>L_col1</zorder>
             <zorder>L_col2</zorder>
@@ -1293,6 +1280,40 @@ p, li { white-space: pre-wrap; }
         </layout>
        </item>
        <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label_35">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;V&lt;/span&gt;&lt;span style=&quot; font-size:24pt; vertical-align:sub;&quot;&gt;n&lt;/span&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt; = &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="formula">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
         <layout class="QHBoxLayout" name="horizontalLayout_6">
          <item>
           <widget class="QLabel" name="label_41">
@@ -1357,7 +1378,7 @@ p, li { white-space: pre-wrap; }
             </font>
            </property>
            <property name="text">
-            <string>Ratio =</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Ratio =&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
@@ -1400,9 +1421,9 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="label_23">
     <property name="geometry">
      <rect>
-      <x>1180</x>
+      <x>1000</x>
       <y>720</y>
-      <width>340</width>
+      <width>500</width>
       <height>34</height>
      </rect>
     </property>
