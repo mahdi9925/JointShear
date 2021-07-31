@@ -261,13 +261,57 @@ class Persenolize(QMainWindow, Ui_MainWindow):
             next_tab()
 
         except ValueError:
+            lineEdit_list = [
+                'b_beam2'
+                ,'h_beam2'
+                ,'A_s2Top'
+                ,'A_s2Btm'
+                ,'A_s1Top'
+                ,'A_s1Btm'
+                ,'h_beam1'
+                ,'b_beam1'
+                ,'x'
+                ,'b_column1'
+                ,'h_column1'
+                ,'d_beam1'
+                ,'d_beam2'
+                ,'L_col1'
+                ,'L_col2'
+                ,'f_y'
+                ,'f_c'
+            ]
+
+            showLineEdit_list = [
+                'b Beam2'
+                ,'h Beam2'
+                ,'As2 Top'
+                ,'As2 Bottom'
+                ,'As1 Top'
+                ,'As1 Bottom'
+                ,'h Beam1'
+                ,'b Beam1'
+                ,'x'
+                ,'b'
+                ,'h'
+                ,'d Beam1'
+                ,'d Beam2'
+                ,'L Column1'
+                ,'L Column2'
+                ,'Fy'
+                ,"F'c"
+            ]
             for child in self.frame.findChildren(QLineEdit):
                 if len(child.text()) == 0:
+                    for index ,value in enumerate(lineEdit_list):
+                        if child.objectName() == value:
+                            Name = showLineEdit_list[index]
+                            break
+
                     msg = QMessageBox()
                     msg.setIcon(QMessageBox.Information)
-                    msg.setText(f'row {child.objectName()} is empty!')
+                    msg.setText(f'Row ( {Name} ) is empty!')
                     msg.setInformativeText(
-                        "All rows must have a value.\nYou can look at the details to correct your mistake."
+                        "All rows must have a value.\nYou must correct your mistake."
                     )
                     msg.setWindowTitle("Error")
                     msg.setStandardButtons(QMessageBox.Retry)
@@ -347,8 +391,6 @@ class ShortcutWindow(QDialog):
         try:
             if self.settings.value('checkBox') == 'false':
                 self.show()
-            else:
-                print('no ')
         except:
             pass
         
