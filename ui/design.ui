@@ -1267,7 +1267,7 @@ p, li { white-space: pre-wrap; }
   <tabstop>tabWidget</tabstop>
  </tabstops>
  <resources>
-  <include location="img.qrc"/>
+  <include location="resource-files/img.qrc"/>
  </resources>
  <connections>
   <connection>
