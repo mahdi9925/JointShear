@@ -151,32 +151,6 @@
        </property>
       </item>
      </widget>
-     <widget class="QPushButton" name="ok">
-      <property name="geometry">
-       <rect>
-        <x>103</x>
-        <y>200</y>
-        <width>75</width>
-        <height>26</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{
-	background-color: rgb(225, 225, 225);
-	border-radius : 3px;
-	border: 2px solid #5fa2fa;
-}
-
-QPushButton:hover{
-	background-color: rgb(225, 225, 225);
-	border-radius : 3px;
-	border: 3px solid #0d76ff;
-}</string>
-      </property>
-      <property name="text">
-       <string>OK</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="cancel">
       <property name="geometry">
        <rect>
