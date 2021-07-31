@@ -26,9 +26,9 @@ class Ui_Dialog(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.checkBox = QtWidgets.QCheckBox(self.frame)
-        self.checkBox.setGeometry(QtCore.QRect(10, 190, 133, 41))
+        self.checkBox.setGeometry(QtCore.QRect(4, 190, 101, 41))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(10)
         self.checkBox.setFont(font)
         self.checkBox.setAutoFillBackground(False)
         self.checkBox.setCheckable(True)
@@ -63,9 +63,9 @@ class Ui_Dialog(object):
         item_0.setFont(1, font)
         self.treeWidget.header().setVisible(True)
         self.treeWidget.header().setCascadingSectionResizes(False)
-        self.pushButton = QtWidgets.QPushButton(self.frame)
-        self.pushButton.setGeometry(QtCore.QRect(170, 200, 75, 26))
-        self.pushButton.setStyleSheet("QPushButton{\n"
+        self.ok = QtWidgets.QPushButton(self.frame)
+        self.ok.setGeometry(QtCore.QRect(103, 200, 75, 26))
+        self.ok.setStyleSheet("QPushButton{\n"
 "    background-color: rgb(225, 225, 225);\n"
 "    border-radius : 3px;\n"
 "    border: 2px solid #5fa2fa;\n"
@@ -76,7 +76,21 @@ class Ui_Dialog(object):
 "    border-radius : 3px;\n"
 "    border: 3px solid #0d76ff;\n"
 "}")
-        self.pushButton.setObjectName("pushButton")
+        self.ok.setObjectName("ok")
+        self.cancel = QtWidgets.QPushButton(self.frame)
+        self.cancel.setGeometry(QtCore.QRect(180, 200, 75, 26))
+        self.cancel.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(225, 225, 225);\n"
+"    border-radius : 3px;\n"
+"    border: 2px solid #5fa2fa;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"    background-color: rgb(225, 225, 225);\n"
+"    border-radius : 3px;\n"
+"    border: 3px solid #0d76ff;\n"
+"}")
+        self.cancel.setObjectName("cancel")
         self.horizontalLayout.addWidget(self.frame)
 
         self.retranslateUi(Dialog)
@@ -95,7 +109,8 @@ class Ui_Dialog(object):
         self.treeWidget.topLevelItem(1).setText(0, _translate("Dialog", "CTRL+R"))
         self.treeWidget.topLevelItem(1).setText(1, _translate("Dialog", "RUN"))
         self.treeWidget.setSortingEnabled(__sortingEnabled)
-        self.pushButton.setText(_translate("Dialog", "OK"))
+        self.ok.setText(_translate("Dialog", "OK"))
+        self.cancel.setText(_translate("Dialog", "Cancel"))
 
 
 if __name__ == "__main__":
