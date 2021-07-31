@@ -1,11 +1,11 @@
 import math
-import os
 import sys
 
+from shortcut import Ui_Dialog
 from design import Ui_MainWindow
-from PyQt5.QtCore import QRegExp
+from PyQt5.QtCore import QRegExp ,Qt,QEvent
 from PyQt5.QtGui import QIcon, QPixmap, QRegExpValidator
-from PyQt5.QtWidgets import QApplication, QLineEdit, QMainWindow, QMessageBox
+from PyQt5.QtWidgets import QApplication, QLineEdit, QMainWindow, QMessageBox,QDialog   
 
 
 class Persenolize(QMainWindow, Ui_MainWindow):
@@ -44,6 +44,17 @@ class Persenolize(QMainWindow, Ui_MainWindow):
 
         self.start.clicked.connect(self.calculate)
         self.show()
+        self.shortcut = ShortcutWindow()
+        self.shortcut.show()
+
+    # when user press Enter cursor move to next line edit
+    def event(self, event):
+            if event.type() == QEvent.KeyPress and event.key() in (
+                Qt.Key_Enter,
+                Qt.Key_Return,
+            ):
+                self.focusNextPrevChild(True)
+            return super().event(event)
 
     def disable_enable_beam1_2(self):
         if self.beam1_2.currentText().lower() == 'other':
@@ -320,6 +331,27 @@ class Persenolize(QMainWindow, Ui_MainWindow):
 
         calculate_Ratio()
 
+class ShortcutWindow(QDialog):
+    def __init__(self):
+        QDialog.__init__(self)
+        self.ui = Ui_Dialog()
+        self.ui.setupUi(self)
+
+        # ==> REMOVE TITLE BAR
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+
+        self.ui.ok.clicked.connect(self.ok)
+        self.ui.cancel.clicked.connect(lambda: self.close())
+        
+        if self.ui.checkBox.isChecked() == True:
+            print('i am here')
+        else:
+            self.show()
+
+    def ok(self):
+        self.ui.checkBox.setChecked(True)
+        self.close()
 
 app = QApplication(sys.argv)
 main = Persenolize()
