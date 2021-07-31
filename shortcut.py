@@ -26,7 +26,7 @@ class Ui_Dialog(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.checkBox = QtWidgets.QCheckBox(self.frame)
-        self.checkBox.setGeometry(QtCore.QRect(70, 190, 133, 41))
+        self.checkBox.setGeometry(QtCore.QRect(10, 190, 133, 41))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.checkBox.setFont(font)
@@ -41,8 +41,9 @@ class Ui_Dialog(object):
         self.treeWidget.setAllColumnsShowFocus(False)
         self.treeWidget.setObjectName("treeWidget")
         self.treeWidget.headerItem().setTextAlignment(0, QtCore.Qt.AlignCenter)
+        self.treeWidget.headerItem().setBackground(0, QtGui.QColor(192, 167, 255))
         self.treeWidget.headerItem().setTextAlignment(1, QtCore.Qt.AlignCenter)
-        item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
+        self.treeWidget.headerItem().setBackground(1, QtGui.QColor(192, 167, 255))
         item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
         font = QtGui.QFont()
         font.setPointSize(13)
@@ -62,6 +63,20 @@ class Ui_Dialog(object):
         item_0.setFont(1, font)
         self.treeWidget.header().setVisible(True)
         self.treeWidget.header().setCascadingSectionResizes(False)
+        self.pushButton = QtWidgets.QPushButton(self.frame)
+        self.pushButton.setGeometry(QtCore.QRect(170, 200, 75, 26))
+        self.pushButton.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(225, 225, 225);\n"
+"    border-radius : 3px;\n"
+"    border: 2px solid #5fa2fa;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"    background-color: rgb(225, 225, 225);\n"
+"    border-radius : 3px;\n"
+"    border: 3px solid #0d76ff;\n"
+"}")
+        self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.frame)
 
         self.retranslateUi(Dialog)
@@ -75,11 +90,12 @@ class Ui_Dialog(object):
         self.treeWidget.headerItem().setText(1, _translate("Dialog", "توضیحات"))
         __sortingEnabled = self.treeWidget.isSortingEnabled()
         self.treeWidget.setSortingEnabled(False)
-        self.treeWidget.topLevelItem(1).setText(0, _translate("Dialog", "TAB"))
-        self.treeWidget.topLevelItem(1).setText(1, _translate("Dialog", "Next line"))
-        self.treeWidget.topLevelItem(2).setText(0, _translate("Dialog", "CTRL+R"))
-        self.treeWidget.topLevelItem(2).setText(1, _translate("Dialog", "RUN"))
+        self.treeWidget.topLevelItem(0).setText(0, _translate("Dialog", "TAB"))
+        self.treeWidget.topLevelItem(0).setText(1, _translate("Dialog", "Next line"))
+        self.treeWidget.topLevelItem(1).setText(0, _translate("Dialog", "CTRL+R"))
+        self.treeWidget.topLevelItem(1).setText(1, _translate("Dialog", "RUN"))
         self.treeWidget.setSortingEnabled(__sortingEnabled)
+        self.pushButton.setText(_translate("Dialog", "OK"))
 
 
 if __name__ == "__main__":
