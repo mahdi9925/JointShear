@@ -1,6 +1,5 @@
 <RCC>
-  <qresource prefix="help">
-    <file>2.jpg</file>
-    <file>1.jpg</file>
+  <qresource prefix="input-img">
+    <file>joint img.jpg</file>
   </qresource>
 </RCC>
