@@ -10,7 +10,11 @@ from PyQt5.QtWidgets import QApplication, QLineEdit, QMainWindow, QMessageBox
 
 class Persenolize(QMainWindow, Ui_MainWindow):
     def __init__(self):
-        super().__init__()
+        # super().__init__()
+        super(Persenolize, self).__init__()
+        self.initUI()
+
+    def initUI(self):
         self.setupUi(self)
         self.setWindowIcon(QIcon("icon.ico"))
 
@@ -39,7 +43,6 @@ class Persenolize(QMainWindow, Ui_MainWindow):
         self.beam1_2.currentTextChanged.connect(self.disable_enable_beam1_2)
 
         self.start.clicked.connect(self.calculate)
-        # self.start.clicked.connect(self.next_tab)
         self.show()
 
     def disable_enable_beam1_2(self):
@@ -73,8 +76,6 @@ class Persenolize(QMainWindow, Ui_MainWindow):
         else:
             self.L_col2.setEnabled(True)
 
-    
-
     def calculate(self):
         frame_type, column_is, beam1_2, joint = self.frame_type.currentText(
         ).lower(), self.column_is.currentText().lower(
@@ -93,29 +94,23 @@ class Persenolize(QMainWindow, Ui_MainWindow):
         ), self.L_col2.text(), self.h_column1.text(), self.x.text(
         ), self.b_column1.text()
 
-        #* ToDo: Resize picture and mpr labels in output tab  
-        
+        # * ToDo: Resize picture and mpr labels in output tab
+
         def next_tab(self):
             cur_index = self.tabWidget.currentIndex()
             if cur_index < len(self.tabWidget) - 1:
                 self.tabWidget.setCurrentIndex(cur_index + 1)
 
         def base_formula(coefficient):
-            # os.system('clear')
             nonlocal b_beam2
             nonlocal b_beam1
 
             if b_beam1 > b_column1 and b_beam2 > b_column1:
                 b_beam2 = b_beam1 = float(self.b_column1.text())
-                # self.log.append('b column1 = b beam1 = b beam2\n')
-
             elif b_beam1 > b_column1:
                 b_beam1 = float(self.b_column1.text())
-                # self.log.append('b column1 = b beam1\n')
-
             elif b_beam2 > b_column1:
                 b_beam2 = float(self.b_column1.text())
-                # self.log.append('b column1 = b beam2\n')
             else:
                 pass
 
@@ -172,8 +167,6 @@ class Persenolize(QMainWindow, Ui_MainWindow):
             phi_Vn = round((formula * phi) * 1e-3)
             self.label_42.setNum(int(formula) * 1e-3)
             self.phi_v_n.setNum(phi_Vn)
-            # self.log.append(f"φVn = {str(phi_Vn)} (tonf)")
-            # self.log.append(f'Aj = {str(Aj)} (cm2)')
             return float(round(formula * 1e-3, 2))
 
         def calculate_mpr_1Top():
@@ -253,9 +246,9 @@ class Persenolize(QMainWindow, Ui_MainWindow):
 
             L_col1, L_col2, h_column1, x, b_column1 = float(L_col1), float(
                 L_col2), float(h_column1), float(x), float(b_column1)
-            
+
             next_tab()
-        
+
         except ValueError:
             for child in self.frame.findChildren(QLineEdit):
                 if len(child.text()) == 0:
@@ -266,7 +259,7 @@ class Persenolize(QMainWindow, Ui_MainWindow):
                         "All rows must have a value.\nYou can look at the details to correct your mistake."
                     )
                     msg.setWindowTitle("Error")
-                    msg.setStandardButtons(QMessageBox.Retry | QMessageBox.Cancel)
+                    msg.setStandardButtons(QMessageBox.Retry)
                     btn = msg.exec_()
                     if btn == QMessageBox.Retry:
                         return
@@ -294,26 +287,18 @@ class Persenolize(QMainWindow, Ui_MainWindow):
         if column_is == 'continuous' and beam1_2 == 'continuous' and joint == 'confined':
             self.formula.setText("5.3 √F'c * Aj")
             base_formula(5.3)
-            # self.log.append(
-            #     f"Vn = 5.3 √F'c * Aj\nVn = {base_formula(5.3)} (tonf)")
 
         elif column_is == 'continuous' and beam1_2 == 'continuous' and joint == 'not confined' or column_is == 'continuous' and beam1_2 == 'other' and joint == 'confined' or column_is == 'other' and beam1_2 == 'continuous' and joint == 'confined':
             self.formula.setText("4.0 √F'c * Aj")
             base_formula(4.0)
-            # self.log.append(
-            #     f"Vn = 4.0 √F'c * Aj\nVn = {base_formula(4.0)} (tonf)")
 
         elif column_is == 'continuous' and beam1_2 == 'other' and joint == 'not confined' or column_is == 'other' and beam1_2 == 'continuous' and joint == 'not confined' or column_is == 'other' and beam1_2 == 'other' and joint == 'confined':
             self.formula.setText("3.2 √F'c * Aj")
             base_formula(3.2)
-            # self.log.append(
-            #     f"Vn = 3.2 √F'c * Aj\nVn = {base_formula(3.2)} (tonf)")
 
         elif column_is == 'other' and beam1_2 == 'other' and joint == 'not confined':
             self.formula.setText("2.12 √F'c * Aj")
             base_formula(2.12)
-            # self.log.append(
-            #     f"Vn = 2.12 √F'c * Aj\nVn = {base_formula(2.12)} (tonf)")
 
         mpr1_top = calculate_mpr_1Top()
         self.mpr_1_top.setNum(mpr1_top)
