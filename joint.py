@@ -39,7 +39,7 @@ class Persenolize(QMainWindow, Ui_MainWindow):
         self.beam1_2.currentTextChanged.connect(self.disable_enable_beam1_2)
 
         self.start.clicked.connect(self.calculate)
-        self.start.clicked.connect(self.next_tab)
+        # self.start.clicked.connect(self.next_tab)
         self.show()
 
     def disable_enable_beam1_2(self):
@@ -73,10 +73,7 @@ class Persenolize(QMainWindow, Ui_MainWindow):
         else:
             self.L_col2.setEnabled(True)
 
-    def next_tab(self):
-        cur_index = self.tabWidget.currentIndex()
-        if cur_index < len(self.tabWidget) - 1:
-            self.tabWidget.setCurrentIndex(cur_index + 1)
+    
 
     def calculate(self):
         frame_type, column_is, beam1_2, joint = self.frame_type.currentText(
@@ -96,24 +93,12 @@ class Persenolize(QMainWindow, Ui_MainWindow):
         ), self.L_col2.text(), self.h_column1.text(), self.x.text(
         ), self.b_column1.text()
 
-        for child in self.frame.findChildren(QLineEdit):
-            if len(child.text()) == 0:
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Information)
-                msg.setText(f'row {child.objectName()} is empty!')
-                msg.setInformativeText(
-                    "All rows must have a value.\nYou can look at the details to correct your mistake."
-                )
-                msg.setWindowTitle("Error")
-                msg.setStandardButtons(QMessageBox.Retry | QMessageBox.Cancel)
-                btn = msg.exec_()
-                if btn == QMessageBox.Retry:
-                    os.execl(sys.executable, sys.executable, *sys.argv)
-                else:
-                    sys.exit()
-                # os.system('clear')
-            else:
-                pass
+        #* ToDo: Resize picture and mpr labels in output tab  
+        
+        def next_tab(self):
+            cur_index = self.tabWidget.currentIndex()
+            if cur_index < len(self.tabWidget) - 1:
+                self.tabWidget.setCurrentIndex(cur_index + 1)
 
         def base_formula(coefficient):
             # os.system('clear')
@@ -258,16 +243,34 @@ class Persenolize(QMainWindow, Ui_MainWindow):
                 self.label_39.setPixmap(emoji)
                 self.label_39.adjustSize()
                 self.label_37.adjustSize()
+        try:
+            A_s1Top, A_s1Btm, d_beam1, b_beam1, f_y, f_c, h_beam1 = float(
+                A_s1Top), float(A_s1Btm), float(d_beam1), float(b_beam1), float(
+                    f_y), float(f_c), float(h_beam1)
 
-        A_s1Top, A_s1Btm, d_beam1, b_beam1, f_y, f_c, h_beam1 = float(
-            A_s1Top), float(A_s1Btm), float(d_beam1), float(b_beam1), float(
-                f_y), float(f_c), float(h_beam1)
+            A_s2Top, A_s2Btm, d_beam2, b_beam2, h_beam2 = float(A_s2Top), float(
+                A_s2Btm), float(d_beam2), float(b_beam2), float(h_beam2)
 
-        A_s2Top, A_s2Btm, d_beam2, b_beam2, h_beam2 = float(A_s2Top), float(
-            A_s2Btm), float(d_beam2), float(b_beam2), float(h_beam2)
-
-        L_col1, L_col2, h_column1, x, b_column1 = float(L_col1), float(
-            L_col2), float(h_column1), float(x), float(b_column1)
+            L_col1, L_col2, h_column1, x, b_column1 = float(L_col1), float(
+                L_col2), float(h_column1), float(x), float(b_column1)
+            
+            next_tab()
+        
+        except ValueError:
+            for child in self.frame.findChildren(QLineEdit):
+                if len(child.text()) == 0:
+                    msg = QMessageBox()
+                    msg.setIcon(QMessageBox.Information)
+                    msg.setText(f'row {child.objectName()} is empty!')
+                    msg.setInformativeText(
+                        "All rows must have a value.\nYou can look at the details to correct your mistake."
+                    )
+                    msg.setWindowTitle("Error")
+                    msg.setStandardButtons(QMessageBox.Retry | QMessageBox.Cancel)
+                    btn = msg.exec_()
+                    if btn == QMessageBox.Retry:
+                        return
+            return
 
         if frame_type == 'special':
             self.alpha.setNum(1.25)
@@ -290,21 +293,25 @@ class Persenolize(QMainWindow, Ui_MainWindow):
 
         if column_is == 'continuous' and beam1_2 == 'continuous' and joint == 'confined':
             self.formula.setText("5.3 √F'c * Aj")
+            base_formula(5.3)
             # self.log.append(
             #     f"Vn = 5.3 √F'c * Aj\nVn = {base_formula(5.3)} (tonf)")
 
         elif column_is == 'continuous' and beam1_2 == 'continuous' and joint == 'not confined' or column_is == 'continuous' and beam1_2 == 'other' and joint == 'confined' or column_is == 'other' and beam1_2 == 'continuous' and joint == 'confined':
             self.formula.setText("4.0 √F'c * Aj")
+            base_formula(4.0)
             # self.log.append(
             #     f"Vn = 4.0 √F'c * Aj\nVn = {base_formula(4.0)} (tonf)")
 
         elif column_is == 'continuous' and beam1_2 == 'other' and joint == 'not confined' or column_is == 'other' and beam1_2 == 'continuous' and joint == 'not confined' or column_is == 'other' and beam1_2 == 'other' and joint == 'confined':
             self.formula.setText("3.2 √F'c * Aj")
+            base_formula(3.2)
             # self.log.append(
             #     f"Vn = 3.2 √F'c * Aj\nVn = {base_formula(3.2)} (tonf)")
 
         elif column_is == 'other' and beam1_2 == 'other' and joint == 'not confined':
             self.formula.setText("2.12 √F'c * Aj")
+            base_formula(2.12)
             # self.log.append(
             #     f"Vn = 2.12 √F'c * Aj\nVn = {base_formula(2.12)} (tonf)")
 
