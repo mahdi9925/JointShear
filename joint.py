@@ -122,15 +122,15 @@ class Persenolize(QMainWindow, Ui_MainWindow):
 
             if b_beam1 > b_column1 and b_beam2 > b_column1:
                 b_beam2 = b_beam1 = float(self.b_column1.text())
-                self.log.append('b column1 = b beam1 = b beam2\n')
+                # self.log.append('b column1 = b beam1 = b beam2\n')
 
             elif b_beam1 > b_column1:
                 b_beam1 = float(self.b_column1.text())
-                self.log.append('b column1 = b beam1\n')
+                # self.log.append('b column1 = b beam1\n')
 
             elif b_beam2 > b_column1:
                 b_beam2 = float(self.b_column1.text())
-                self.log.append('b column1 = b beam2\n')
+                # self.log.append('b column1 = b beam2\n')
             else:
                 pass
 
@@ -187,41 +187,41 @@ class Persenolize(QMainWindow, Ui_MainWindow):
             phi_Vn = round((formula * phi) * 1e-3)
             self.label_42.setNum(int(formula) * 1e-3)
             self.phi_v_n.setNum(phi_Vn)
-            self.log.append(f"φVn = {str(phi_Vn)} (tonf)")
-            self.log.append(f'Aj = {str(Aj)} (cm2)')
+            # self.log.append(f"φVn = {str(phi_Vn)} (tonf)")
+            # self.log.append(f'Aj = {str(Aj)} (cm2)')
             return float(round(formula * 1e-3, 2))
 
         def calculate_mpr_1Top():
-            reslut1 = A_s1Top * d_beam1 * alpha * f_y
-            reslut2 = (0.59 * f_y * alpha * A_s1Top) / \
+            result1 = A_s1Top * d_beam1 * alpha * f_y
+            result2 = (0.59 * f_y * alpha * A_s1Top) / \
                 (b_beam1 * d_beam1 * f_c)
-            mpr1_top = round((reslut1 * (1 - reslut2)) * 1e-3, 3)
+            mpr1_top = round((result1 * (1 - result2)) * 1e-3, 3)
             return mpr1_top
 
         def calculate_mpr_2Top():
-            reslut1 = A_s2Top * d_beam2 * alpha * f_y
-            reslut2 = (0.59 * f_y * alpha * A_s2Top) / \
+            result1 = A_s2Top * d_beam2 * alpha * f_y
+            result2 = (0.59 * f_y * alpha * A_s2Top) / \
                 (b_beam2 * d_beam2 * f_c)
-            mpr2_top = round((reslut1 * (1 - reslut2)) * 1e-3, 3)
+            mpr2_top = round((result1 * (1 - result2)) * 1e-3, 3)
             return mpr2_top
 
         def calculate_mpr_1Btm():
-            reslut1 = A_s1Btm * d_beam1 * alpha * f_y
-            reslut2 = (0.59 * f_y * alpha * A_s1Btm) / \
+            result1 = A_s1Btm * d_beam1 * alpha * f_y
+            result2 = (0.59 * f_y * alpha * A_s1Btm) / \
                 (b_beam1 * d_beam1 * f_c)
-            mpr1_btm = round((reslut1 * (1 - reslut2)) * 1e-3, 3)
+            mpr1_btm = round((result1 * (1 - result2)) * 1e-3, 3)
             return mpr1_btm
 
         def calculate_mpr_2Btm():
-            reslut1 = A_s2Btm * d_beam2 * alpha * f_y
-            reslut2 = (0.59 * f_y * alpha * A_s2Btm) / \
+            result1 = A_s2Btm * d_beam2 * alpha * f_y
+            result2 = (0.59 * f_y * alpha * A_s2Btm) / \
                 (b_beam2 * d_beam2 * f_c)
-            mpr2_btm = round((reslut1 * (1 - reslut2)) * 1e-3, 3)
+            mpr2_btm = round((result1 * (1 - result2)) * 1e-3, 3)
             return mpr2_btm
 
         def calculate_V1():
-            reslut1 = max(A_s1Btm + A_s2Top, A_s1Top + A_s2Btm)
-            result2 = reslut1 * alpha * f_y
+            result1 = max(A_s1Btm + A_s2Top, A_s1Top + A_s2Btm)
+            result2 = result1 * alpha * f_y
             V1 = result2 * 1e-3
             return V1
 
@@ -289,20 +289,24 @@ class Persenolize(QMainWindow, Ui_MainWindow):
             self.mpr_2_btm.setNum(mpr2_btm)
 
         if column_is == 'continuous' and beam1_2 == 'continuous' and joint == 'confined':
-            self.log.append(
-                f"Vn = 5.3 √F'c * Aj\nVn = {base_formula(5.3)} (tonf)")
+            self.formula.setText("5.3 √F'c * Aj")
+            # self.log.append(
+            #     f"Vn = 5.3 √F'c * Aj\nVn = {base_formula(5.3)} (tonf)")
 
         elif column_is == 'continuous' and beam1_2 == 'continuous' and joint == 'not confined' or column_is == 'continuous' and beam1_2 == 'other' and joint == 'confined' or column_is == 'other' and beam1_2 == 'continuous' and joint == 'confined':
-            self.log.append(
-                f"Vn = 4.0 √F'c * Aj\nVn = {base_formula(4.0)} (tonf)")
+            self.formula.setText("4.0 √F'c * Aj")
+            # self.log.append(
+            #     f"Vn = 4.0 √F'c * Aj\nVn = {base_formula(4.0)} (tonf)")
 
         elif column_is == 'continuous' and beam1_2 == 'other' and joint == 'not confined' or column_is == 'other' and beam1_2 == 'continuous' and joint == 'not confined' or column_is == 'other' and beam1_2 == 'other' and joint == 'confined':
-            self.log.append(
-                f"Vn = 3.2 √F'c * Aj\nVn = {base_formula(3.2)} (tonf)")
+            self.formula.setText("3.2 √F'c * Aj")
+            # self.log.append(
+            #     f"Vn = 3.2 √F'c * Aj\nVn = {base_formula(3.2)} (tonf)")
 
         elif column_is == 'other' and beam1_2 == 'other' and joint == 'not confined':
-            self.log.append(
-                f"Vn = 2.12 √F'c * Aj\nVn = {base_formula(2.12)} (tonf)")
+            self.formula.setText("2.12 √F'c * Aj")
+            # self.log.append(
+            #     f"Vn = 2.12 √F'c * Aj\nVn = {base_formula(2.12)} (tonf)")
 
         mpr1_top = calculate_mpr_1Top()
         self.mpr_1_top.setNum(mpr1_top)
