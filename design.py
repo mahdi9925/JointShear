@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'design-new.ui'
+# Form implementation generated from reading ui file 'design.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -57,7 +57,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.L_col1.setFont(font)
         self.L_col1.setStyleSheet("QLineEdit{\n"
 "    background-color :#4da6ff;\n"
@@ -69,7 +68,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.L_col2.setFont(font)
         self.L_col2.setStyleSheet("QLineEdit{\n"
 "    background-color :#4da6ff;\n"
@@ -81,7 +79,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.b_beam2.setFont(font)
         self.b_beam2.setStyleSheet("QLineEdit{\n"
 "    background-color : #b84dff;\n"
@@ -93,7 +90,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.h_beam2.setFont(font)
         self.h_beam2.setStyleSheet("QLineEdit{\n"
 "    background-color : #b84dff;\n"
@@ -105,7 +101,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.A_s2Top.setFont(font)
         self.A_s2Top.setStyleSheet("QLineEdit{\n"
 "    background-color :#b84dff;\n"
@@ -117,7 +112,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.A_s2Btm.setFont(font)
         self.A_s2Btm.setStyleSheet("QLineEdit{\n"
 "    background-color :#b84dff;\n"
@@ -129,7 +123,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.A_s1Top.setFont(font)
         self.A_s1Top.setStyleSheet("QLineEdit{\n"
 "    background-color :#ff974d;\n"
@@ -141,7 +134,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.A_s1Btm.setFont(font)
         self.A_s1Btm.setStyleSheet("QLineEdit{\n"
 "    background-color :#ff974d;\n"
@@ -153,7 +145,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.h_beam1.setFont(font)
         self.h_beam1.setStyleSheet("QLineEdit{\n"
 "    background-color :#ff974d;\n"
@@ -166,7 +157,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.b_beam1.setFont(font)
         self.b_beam1.setStyleSheet("QLineEdit{\n"
 "    background-color :#ff974d;\n"
@@ -178,7 +168,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.x.setFont(font)
         self.x.setStyleSheet("QLineEdit{\n"
 "    background-color : #41e0c6;\n"
@@ -191,7 +180,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.b_column1.setFont(font)
         self.b_column1.setStyleSheet("QLineEdit{\n"
 "    background-color :#41e0c6;\n"
@@ -203,7 +191,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.h_column1.setFont(font)
         self.h_column1.setStyleSheet("QLineEdit{\n"
 "    background-color : #41e0c6;\n"
@@ -231,7 +218,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.d_beam1.setFont(font)
         self.d_beam1.setStyleSheet("QLineEdit{\n"
 "    background-color :#ff974d;\n"
@@ -243,7 +229,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.d_beam2.setFont(font)
         self.d_beam2.setStyleSheet("QLineEdit{\n"
 "    background-color :#b84dff;\n"
@@ -260,11 +245,9 @@ class Ui_MainWindow(object):
         self.start = QtWidgets.QPushButton(self.frame)
         self.start.setGeometry(QtCore.QRect(60, 590, 201, 51))
         font = QtGui.QFont()
-        font.setFamily("MS Reference Sans Serif")
         font.setPointSize(20)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(50)
         self.start.setFont(font)
         self.start.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.start.setStyleSheet("QPushButton{\n"
@@ -283,7 +266,7 @@ class Ui_MainWindow(object):
 "}")
         self.start.setObjectName("start")
         self.layoutWidget_3 = QtWidgets.QWidget(self.frame)
-        self.layoutWidget_3.setGeometry(QtCore.QRect(10, 350, 191, 81))
+        self.layoutWidget_3.setGeometry(QtCore.QRect(10, 330, 191, 81))
         self.layoutWidget_3.setObjectName("layoutWidget_3")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.layoutWidget_3)
         self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -305,7 +288,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.f_y.setFont(font)
         self.f_y.setStyleSheet("QLineEdit{\n"
 "    background-color :#e1e1e1;\n"
@@ -331,7 +313,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
-        font.setWeight(50)
         self.f_c.setFont(font)
         self.f_c.setStyleSheet("QLineEdit{\n"
 "    background-color :#e1e1e1;\n"
@@ -342,7 +323,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.addWidget(self.f_c, 0, 1, 1, 1)
         self.gridLayout_3.addLayout(self.gridLayout_2, 1, 0, 1, 1)
         self.layoutWidget_2 = QtWidgets.QWidget(self.frame)
-        self.layoutWidget_2.setGeometry(QtCore.QRect(10, 440, 511, 134))
+        self.layoutWidget_2.setGeometry(QtCore.QRect(10, 420, 511, 146))
         self.layoutWidget_2.setObjectName("layoutWidget_2")
         self.formLayout_5 = QtWidgets.QFormLayout(self.layoutWidget_2)
         self.formLayout_5.setContentsMargins(0, 0, 0, 0)
@@ -722,10 +703,8 @@ class Ui_MainWindow(object):
         self.label_23 = QtWidgets.QLabel(self.centralwidget)
         self.label_23.setGeometry(QtCore.QRect(1000, 720, 500, 34))
         font = QtGui.QFont()
-        font.setFamily("B Koodak")
         font.setPointSize(15)
         font.setBold(True)
-        font.setWeight(75)
         self.label_23.setFont(font)
         self.label_23.setObjectName("label_23")
         self.label_40 = QtWidgets.QLabel(self.centralwidget)
