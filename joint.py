@@ -97,7 +97,7 @@ class Persenolize(QMainWindow, Ui_MainWindow):
         ), self.b_column1.text()
 
         count = 0
-        for child in self.widget.findChildren(QLineEdit):
+        for child in self.frame.findChildren(QLineEdit):
             count += 1
             if len(child.text()) == 0:
                 msg = QMessageBox()
