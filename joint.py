@@ -96,18 +96,15 @@ class Persenolize(QMainWindow, Ui_MainWindow):
         ), self.L_col2.text(), self.h_column1.text(), self.x.text(
         ), self.b_column1.text()
 
-        count = 0
         for child in self.frame.findChildren(QLineEdit):
-            count += 1
             if len(child.text()) == 0:
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Information)
-                msg.setText("There is a empty row.")
+                msg.setText(f'row {child.objectName()} is empty!')
                 msg.setInformativeText(
                     "All rows must have a value.\nYou can look at the details to correct your mistake."
                 )
                 msg.setWindowTitle("Error")
-                msg.setDetailedText(f'row {count+4} is empty!')
                 msg.setStandardButtons(QMessageBox.Retry | QMessageBox.Cancel)
                 btn = msg.exec_()
                 if btn == QMessageBox.Retry:
