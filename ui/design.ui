@@ -925,7 +925,7 @@ QPushButton:hover{
        <rect>
         <x>240</x>
         <y>10</y>
-        <width>1081</width>
+        <width>1291</width>
         <height>121</height>
        </rect>
       </property>
@@ -1061,8 +1061,8 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>240</x>
         <y>140</y>
-        <width>1081</width>
-        <height>551</height>
+        <width>1291</width>
+        <height>541</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -1147,6 +1147,13 @@ p, li { white-space: pre-wrap; }
           </widget>
          </item>
         </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_25">
@@ -1261,12 +1268,19 @@ p, li { white-space: pre-wrap; }
         </layout>
        </item>
        <item>
+        <widget class="Line" name="line_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
           <widget class="QLabel" name="label_35">
            <property name="minimumSize">
             <size>
-             <width>0</width>
+             <width>40</width>
              <height>0</height>
             </size>
            </property>
@@ -1348,6 +1362,13 @@ p, li { white-space: pre-wrap; }
           </widget>
          </item>
         </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_30">
@@ -1453,8 +1474,8 @@ p, li { white-space: pre-wrap; }
   <tabstop>d_beam2</tabstop>
   <tabstop>A_s2Btm</tabstop>
   <tabstop>x</tabstop>
-  <tabstop>h_column1</tabstop>
   <tabstop>b_column1</tabstop>
+  <tabstop>h_column1</tabstop>
   <tabstop>f_y</tabstop>
   <tabstop>f_c</tabstop>
   <tabstop>frame_type</tabstop>
