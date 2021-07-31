@@ -14,7 +14,7 @@ class Persenolize(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.setWindowIcon(QIcon("icon.ico"))
 
-        self.setFixedSize(1360, 777)
+        self.setFixedSize(1537, 774)
         validator = QRegExpValidator(QRegExp("[0-9.]+"))
         self.f_y.setValidator(validator)
         self.f_c.setValidator(validator)
