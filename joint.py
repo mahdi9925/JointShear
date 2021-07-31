@@ -3,7 +3,7 @@ import sys
 
 from shortcut import Ui_Dialog
 from design import Ui_MainWindow
-from PyQt5.QtCore import QRegExp ,Qt,QEvent
+from PyQt5.QtCore import QRegExp ,Qt,QEvent,QSettings
 from PyQt5.QtGui import QIcon, QPixmap, QRegExpValidator
 from PyQt5.QtWidgets import QApplication, QLineEdit, QMainWindow, QMessageBox,QDialog   
 
@@ -44,8 +44,8 @@ class Persenolize(QMainWindow, Ui_MainWindow):
 
         self.start.clicked.connect(self.calculate)
         self.show()
-        self.shortcut = ShortcutWindow()
-        self.shortcut.show()
+
+        ShortcutWindow()
 
     # when user press Enter cursor move to next line edit
     def event(self, event):
@@ -107,7 +107,7 @@ class Persenolize(QMainWindow, Ui_MainWindow):
 
         # * ToDo: Resize picture and mpr labels in output tab
 
-        def next_tab(self):
+        def next_tab():
             cur_index = self.tabWidget.currentIndex()
             if cur_index < len(self.tabWidget) - 1:
                 self.tabWidget.setCurrentIndex(cur_index + 1)
@@ -341,17 +341,19 @@ class ShortcutWindow(QDialog):
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
 
-        self.ui.ok.clicked.connect(self.ok)
         self.ui.cancel.clicked.connect(lambda: self.close())
-        
-        if self.ui.checkBox.isChecked() == True:
-            print('i am here')
-        else:
-            self.show()
 
-    def ok(self):
-        self.ui.checkBox.setChecked(True)
-        self.close()
+        self.settings = QSettings('JointShear','shortcutWindow')
+        try:
+            if self.settings.value('checkBox') == 'false':
+                self.show()
+            else:
+                print('no ')
+        except:
+            pass
+        
+    def closeEvent(self, event):
+        self.settings.setValue('checkBox',self.ui.checkBox.isChecked())
 
 app = QApplication(sys.argv)
 main = Persenolize()
