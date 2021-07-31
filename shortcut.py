@@ -63,20 +63,6 @@ class Ui_Dialog(object):
         item_0.setFont(1, font)
         self.treeWidget.header().setVisible(True)
         self.treeWidget.header().setCascadingSectionResizes(False)
-        self.ok = QtWidgets.QPushButton(self.frame)
-        self.ok.setGeometry(QtCore.QRect(103, 200, 75, 26))
-        self.ok.setStyleSheet("QPushButton{\n"
-"    background-color: rgb(225, 225, 225);\n"
-"    border-radius : 3px;\n"
-"    border: 2px solid #5fa2fa;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    background-color: rgb(225, 225, 225);\n"
-"    border-radius : 3px;\n"
-"    border: 3px solid #0d76ff;\n"
-"}")
-        self.ok.setObjectName("ok")
         self.cancel = QtWidgets.QPushButton(self.frame)
         self.cancel.setGeometry(QtCore.QRect(180, 200, 75, 26))
         self.cancel.setStyleSheet("QPushButton{\n"
@@ -109,7 +95,6 @@ class Ui_Dialog(object):
         self.treeWidget.topLevelItem(1).setText(0, _translate("Dialog", "CTRL+R"))
         self.treeWidget.topLevelItem(1).setText(1, _translate("Dialog", "RUN"))
         self.treeWidget.setSortingEnabled(__sortingEnabled)
-        self.ok.setText(_translate("Dialog", "OK"))
         self.cancel.setText(_translate("Dialog", "Cancel"))
 
 
