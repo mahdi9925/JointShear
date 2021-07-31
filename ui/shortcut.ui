@@ -31,15 +31,15 @@
      <widget class="QCheckBox" name="checkBox">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>4</x>
         <y>190</y>
-        <width>133</width>
+        <width>101</width>
         <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>10</pointsize>
        </font>
       </property>
       <property name="autoFillBackground">
@@ -151,10 +151,10 @@
        </property>
       </item>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="ok">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>103</x>
         <y>200</y>
         <width>75</width>
         <height>26</height>
@@ -175,6 +175,32 @@ QPushButton:hover{
       </property>
       <property name="text">
        <string>OK</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cancel">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>200</y>
+        <width>75</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(225, 225, 225);
+	border-radius : 3px;
+	border: 2px solid #5fa2fa;
+}
+
+QPushButton:hover{
+	background-color: rgb(225, 225, 225);
+	border-radius : 3px;
+	border: 3px solid #0d76ff;
+}</string>
+      </property>
+      <property name="text">
+       <string>Cancel</string>
       </property>
      </widget>
     </widget>
