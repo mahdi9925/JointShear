@@ -104,7 +104,7 @@ class Ui_Dialog(object):
         self.treeWidget.headerItem().setText(1, _translate("Dialog", "توضیحات"))
         __sortingEnabled = self.treeWidget.isSortingEnabled()
         self.treeWidget.setSortingEnabled(False)
-        self.treeWidget.topLevelItem(0).setText(0, _translate("Dialog", "TAB"))
+        self.treeWidget.topLevelItem(0).setText(0, _translate("Dialog", "Enter"))
         self.treeWidget.topLevelItem(0).setText(1, _translate("Dialog", "Next line"))
         self.treeWidget.topLevelItem(1).setText(0, _translate("Dialog", "CTRL+R"))
         self.treeWidget.topLevelItem(1).setText(1, _translate("Dialog", "RUN"))
