@@ -31,7 +31,7 @@
      <widget class="QCheckBox" name="checkBox">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>10</x>
         <y>190</y>
         <width>133</width>
         <height>41</height>
@@ -82,6 +82,13 @@
        <property name="textAlignment">
         <set>AlignCenter</set>
        </property>
+       <property name="background">
+        <color>
+         <red>192</red>
+         <green>167</green>
+         <blue>255</blue>
+        </color>
+       </property>
       </column>
       <column>
        <property name="text">
@@ -90,15 +97,14 @@
        <property name="textAlignment">
         <set>AlignCenter</set>
        </property>
+       <property name="background">
+        <color>
+         <red>192</red>
+         <green>167</green>
+         <blue>255</blue>
+        </color>
+       </property>
       </column>
-      <item>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </item>
       <item>
        <property name="text">
         <string>TAB</string>
@@ -144,6 +150,32 @@
         </font>
        </property>
       </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>200</y>
+        <width>75</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(225, 225, 225);
+	border-radius : 3px;
+	border: 2px solid #5fa2fa;
+}
+
+QPushButton:hover{
+	background-color: rgb(225, 225, 225);
+	border-radius : 3px;
+	border: 3px solid #0d76ff;
+}</string>
+      </property>
+      <property name="text">
+       <string>OK</string>
+      </property>
      </widget>
     </widget>
    </item>
