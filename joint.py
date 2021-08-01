@@ -387,9 +387,10 @@ class ShortcutWindow(QDialog):
 
         self.ui.cancel.clicked.connect(lambda: self.close())
 
-        self.settings = QSettings('JointShear','shortcutWindow')
+        self.settings = QSettings('JointShear','shortcut')
+        val = self.settings.value('checkBox')
         try:
-            if self.settings.value('checkBox') == 'false':
+            if val == 'false' or val == None:
                 self.show()
         except:
             pass
