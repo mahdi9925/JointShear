@@ -18,7 +18,7 @@ class Persenolize(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.setWindowIcon(QIcon("static/icon.ico"))
 
-        # self.setFixedSize(1537, 774)
+        self.setFixedSize(1537, 774)
         validator = QRegExpValidator(QRegExp("[0-9.]+"))
         self.f_y.setValidator(validator)
         self.f_c.setValidator(validator)
@@ -46,12 +46,6 @@ class Persenolize(QMainWindow, Ui_MainWindow):
         self.show()
 
         ShortcutWindow()
-
-    def resizeEvent(self, event):
-        pixmap1 = QPixmap(":/input-img/joint img.jpg")
-        self.pixmap = pixmap1.scaled(self.width(), self.height())
-        self.label.setPixmap(self.pixmap)
-        self.label.resize(self.width(), self.height())
 
     # when user press Enter cursor move to next line edit
     def event(self, event):
