@@ -3,9 +3,9 @@ import sys
 
 from shortcut import Ui_Dialog
 from design import Ui_MainWindow
-from PyQt5.QtCore import QRegExp ,Qt,QEvent,QSettings
+from PyQt5.QtCore import QRegExp, Qt, QEvent, QSettings
 from PyQt5.QtGui import QIcon, QPixmap, QRegExpValidator
-from PyQt5.QtWidgets import QApplication, QLineEdit, QMainWindow, QMessageBox,QDialog   
+from PyQt5.QtWidgets import QApplication, QLineEdit, QMainWindow, QMessageBox, QDialog
 
 
 class Persenolize(QMainWindow, Ui_MainWindow):
@@ -49,12 +49,12 @@ class Persenolize(QMainWindow, Ui_MainWindow):
 
     # when user press Enter cursor move to next line edit
     def event(self, event):
-            if event.type() == QEvent.KeyPress and event.key() in (
-                Qt.Key_Enter,
-                Qt.Key_Return,
-            ):
-                self.focusNextPrevChild(True)
-            return super().event(event)
+        if event.type() == QEvent.KeyPress and event.key() in (
+            Qt.Key_Enter,
+            Qt.Key_Return,
+        ):
+            self.focusNextPrevChild(True)
+        return super().event(event)
 
     def disable_enable_beam1_2(self):
         if self.beam1_2.currentText().lower() == 'other':
@@ -231,8 +231,8 @@ class Persenolize(QMainWindow, Ui_MainWindow):
             if ratio > 1:
                 self.ratio.setText(f'{ratio} N.G.')
                 self.ratio.setStyleSheet('QLabel {color: #FF0000;}')
-                pixmap = QPixmap('static/ng.jpg')
-                emoji = QPixmap('static/notOK.png')
+                pixmap = QPixmap('ng.jpg')
+                emoji = QPixmap('notOK.png')
                 self.label_37.setPixmap(pixmap)
                 self.label_39.setPixmap(emoji)
                 self.label_39.adjustSize()
@@ -241,8 +241,8 @@ class Persenolize(QMainWindow, Ui_MainWindow):
             else:
                 self.ratio.setText(f'{ratio} OK')
                 self.ratio.setStyleSheet('QLabel {color: #228B22;}')
-                pixmap = QPixmap('static/ok.jpg')
-                emoji = QPixmap('static/Ok.png')
+                pixmap = QPixmap('ok.jpg')
+                emoji = QPixmap('Ok.png')
                 self.label_37.setPixmap(pixmap)
                 self.label_39.setPixmap(emoji)
                 self.label_39.adjustSize()
@@ -262,47 +262,15 @@ class Persenolize(QMainWindow, Ui_MainWindow):
 
         except ValueError:
             lineEdit_list = [
-                'b_beam2'
-                ,'h_beam2'
-                ,'A_s2Top'
-                ,'A_s2Btm'
-                ,'A_s1Top'
-                ,'A_s1Btm'
-                ,'h_beam1'
-                ,'b_beam1'
-                ,'x'
-                ,'b_column1'
-                ,'h_column1'
-                ,'d_beam1'
-                ,'d_beam2'
-                ,'L_col1'
-                ,'L_col2'
-                ,'f_y'
-                ,'f_c'
+                'b_beam2', 'h_beam2', 'A_s2Top', 'A_s2Btm', 'A_s1Top', 'A_s1Btm', 'h_beam1', 'b_beam1', 'x', 'b_column1', 'h_column1', 'd_beam1', 'd_beam2', 'L_col1', 'L_col2', 'f_y', 'f_c'
             ]
 
             showLineEdit_list = [
-                'b Beam2'
-                ,'h Beam2'
-                ,'As2 Top'
-                ,'As2 Bottom'
-                ,'As1 Top'
-                ,'As1 Bottom'
-                ,'h Beam1'
-                ,'b Beam1'
-                ,'x'
-                ,'b'
-                ,'h'
-                ,'d Beam1'
-                ,'d Beam2'
-                ,'L Column1'
-                ,'L Column2'
-                ,'Fy'
-                ,"F'c"
+                'b Beam2', 'h Beam2', 'As2 Top', 'As2 Bottom', 'As1 Top', 'As1 Bottom', 'h Beam1', 'b Beam1', 'x', 'b', 'h', 'd Beam1', 'd Beam2', 'L Column1', 'L Column2', 'Fy', "F'c"
             ]
             for child in self.frame.findChildren(QLineEdit):
                 if len(child.text()) == 0:
-                    for index ,value in enumerate(lineEdit_list):
+                    for index, value in enumerate(lineEdit_list):
                         if child.objectName() == value:
                             Name = showLineEdit_list[index]
                             break
@@ -375,6 +343,7 @@ class Persenolize(QMainWindow, Ui_MainWindow):
 
         calculate_Ratio()
 
+
 class ShortcutWindow(QDialog):
     def __init__(self):
         QDialog.__init__(self)
@@ -387,16 +356,17 @@ class ShortcutWindow(QDialog):
 
         self.ui.ok.clicked.connect(lambda: self.close())
 
-        self.settings = QSettings('JointShear','shortcut')
+        self.settings = QSettings('JointShear', 'shortcut')
         val = self.settings.value('checkBox')
         try:
             if val == 'false' or val == None:
                 self.show()
         except:
             pass
-        
+
     def closeEvent(self, event):
-        self.settings.setValue('checkBox',self.ui.checkBox.isChecked())
+        self.settings.setValue('checkBox', self.ui.checkBox.isChecked())
+
 
 app = QApplication(sys.argv)
 main = Persenolize()
