@@ -385,7 +385,7 @@ class ShortcutWindow(QDialog):
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
 
-        self.ui.cancel.clicked.connect(lambda: self.close())
+        self.ui.ok.clicked.connect(lambda: self.close())
 
         self.settings = QSettings('JointShear','shortcut')
         val = self.settings.value('checkBox')
