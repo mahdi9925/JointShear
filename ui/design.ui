@@ -67,7 +67,7 @@
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>-117</y>
+             <y>0</y>
              <width>1496</width>
              <height>758</height>
             </rect>
@@ -139,7 +139,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -177,7 +177,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -215,7 +215,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -253,7 +253,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -291,7 +291,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -329,7 +329,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -367,7 +367,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -405,7 +405,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -443,7 +443,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="readOnly">
@@ -484,7 +484,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -522,7 +522,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -560,7 +560,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -598,7 +598,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -680,7 +680,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -718,7 +718,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                </property>
                <property name="placeholderText">
@@ -853,7 +853,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                     </property>
                     <property name="placeholderText">
@@ -912,7 +912,7 @@ QLineEdit:hover{
 QLineEdit:focus {
 	background-color :#e1e1e1;
 	border-radius:4px;
-	border : 3px solid #ff0015;
+	border : 2px solid #ff0015;
 }</string>
                     </property>
                     <property name="placeholderText">

@@ -43,7 +43,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -117, 1496, 758))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1496, 758))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
@@ -80,7 +80,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.L_col1.setObjectName("L_col1")
         self.L_col2 = QtWidgets.QLineEdit(self.frame)
@@ -104,7 +104,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.L_col2.setObjectName("L_col2")
         self.b_beam2 = QtWidgets.QLineEdit(self.frame)
@@ -128,7 +128,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.b_beam2.setObjectName("b_beam2")
         self.h_beam2 = QtWidgets.QLineEdit(self.frame)
@@ -152,7 +152,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.h_beam2.setObjectName("h_beam2")
         self.A_s2Top = QtWidgets.QLineEdit(self.frame)
@@ -176,7 +176,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.A_s2Top.setObjectName("A_s2Top")
         self.A_s2Btm = QtWidgets.QLineEdit(self.frame)
@@ -200,7 +200,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.A_s2Btm.setObjectName("A_s2Btm")
         self.A_s1Top = QtWidgets.QLineEdit(self.frame)
@@ -224,7 +224,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.A_s1Top.setObjectName("A_s1Top")
         self.A_s1Btm = QtWidgets.QLineEdit(self.frame)
@@ -248,7 +248,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.A_s1Btm.setObjectName("A_s1Btm")
         self.h_beam1 = QtWidgets.QLineEdit(self.frame)
@@ -272,7 +272,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.h_beam1.setReadOnly(False)
         self.h_beam1.setObjectName("h_beam1")
@@ -297,7 +297,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.b_beam1.setObjectName("b_beam1")
         self.x = QtWidgets.QLineEdit(self.frame)
@@ -321,7 +321,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.x.setObjectName("x")
         self.b_column1 = QtWidgets.QLineEdit(self.frame)
@@ -345,7 +345,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.b_column1.setObjectName("b_column1")
         self.h_column1 = QtWidgets.QLineEdit(self.frame)
@@ -369,7 +369,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.h_column1.setObjectName("h_column1")
         self.label_14 = QtWidgets.QLabel(self.frame)
@@ -409,7 +409,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.d_beam1.setObjectName("d_beam1")
         self.d_beam2 = QtWidgets.QLineEdit(self.frame)
@@ -433,7 +433,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.d_beam2.setObjectName("d_beam2")
         self.label_8 = QtWidgets.QLabel(self.frame)
@@ -505,7 +505,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.f_y.setObjectName("f_y")
         self.gridLayout.addWidget(self.f_y, 0, 2, 1, 1)
@@ -542,7 +542,7 @@ class Ui_MainWindow(object):
 "QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 3px solid #ff0015;\n"
+"    border : 2px solid #ff0015;\n"
 "}")
         self.f_c.setObjectName("f_c")
         self.gridLayout_2.addWidget(self.f_c, 0, 1, 1, 1)
