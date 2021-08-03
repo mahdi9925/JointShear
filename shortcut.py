@@ -19,7 +19,7 @@ class Ui_Dialog(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.frame = QtWidgets.QFrame(Dialog)
         self.frame.setStyleSheet("QFrame{\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0.511, stop:0 rgba(66, 167, 245, 255), stop:1 rgba(149, 113, 227, 255));\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(189, 170, 78, 255), stop:1 rgba(179, 99, 255, 255));\n"
 "    border-radius : 5px;\n"
 "}")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -63,20 +63,20 @@ class Ui_Dialog(object):
         item_0.setFont(1, font)
         self.treeWidget.header().setVisible(True)
         self.treeWidget.header().setCascadingSectionResizes(False)
-        self.cancel = QtWidgets.QPushButton(self.frame)
-        self.cancel.setGeometry(QtCore.QRect(180, 200, 75, 26))
-        self.cancel.setStyleSheet("QPushButton{\n"
+        self.ok = QtWidgets.QPushButton(self.frame)
+        self.ok.setGeometry(QtCore.QRect(180, 200, 75, 26))
+        self.ok.setStyleSheet("QPushButton{\n"
 "    background-color: rgb(225, 225, 225);\n"
-"    border-radius : 3px;\n"
-"    border: 2px solid #5fa2fa;\n"
+"    border-radius : 5px;\n"
+"    border: 2px solid #4d90e8;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "    background-color: rgb(225, 225, 225);\n"
-"    border-radius : 3px;\n"
+"    border-radius : 7px;\n"
 "    border: 3px solid #0d76ff;\n"
 "}")
-        self.cancel.setObjectName("cancel")
+        self.ok.setObjectName("ok")
         self.horizontalLayout.addWidget(self.frame)
 
         self.retranslateUi(Dialog)
@@ -95,7 +95,7 @@ class Ui_Dialog(object):
         self.treeWidget.topLevelItem(1).setText(0, _translate("Dialog", "CTRL+R"))
         self.treeWidget.topLevelItem(1).setText(1, _translate("Dialog", "RUN"))
         self.treeWidget.setSortingEnabled(__sortingEnabled)
-        self.cancel.setText(_translate("Dialog", "Cancel"))
+        self.ok.setText(_translate("Dialog", "OK"))
 
 
 if __name__ == "__main__":
