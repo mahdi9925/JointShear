@@ -112,7 +112,7 @@
                <property name="geometry">
                 <rect>
                  <x>870</x>
-                 <y>100</y>
+                 <y>390</y>
                  <width>131</width>
                  <height>25</height>
                 </rect>
@@ -150,7 +150,7 @@ QLineEdit:focus {
                <property name="geometry">
                 <rect>
                  <x>870</x>
-                 <y>380</y>
+                 <y>100</y>
                  <width>131</width>
                  <height>25</height>
                 </rect>
@@ -1662,8 +1662,8 @@ p, li { white-space: pre-wrap; }
   <tabstop>A_s1Btm</tabstop>
   <tabstop>b_beam1</tabstop>
   <tabstop>h_beam1</tabstop>
-  <tabstop>L_col1</tabstop>
   <tabstop>L_col2</tabstop>
+  <tabstop>L_col1</tabstop>
   <tabstop>h_beam2</tabstop>
   <tabstop>b_beam2</tabstop>
   <tabstop>A_s2Top</tabstop>
