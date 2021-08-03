@@ -14,14 +14,21 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1537, 774)
+        MainWindow.resize(1557, 776)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("Desktop/new_version/ui/w/engineering_128_hot.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+        self.gridLayout_4 = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout_4.setObjectName("gridLayout_4")
+        self.label_38 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.label_38.setFont(font)
+        self.label_38.setObjectName("label_38")
+        self.gridLayout_4.addWidget(self.label_38, 1, 0, 1, 1)
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
-        self.tabWidget.setGeometry(QtCore.QRect(-1, 0, 1537, 721))
         font = QtGui.QFont()
         font.setPointSize(11)
         self.tabWidget.setFont(font)
@@ -36,7 +43,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1494, 758))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -117, 1496, 758))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
@@ -61,6 +68,19 @@ class Ui_MainWindow(object):
         self.L_col1.setStyleSheet("QLineEdit{\n"
 "    background-color :#4da6ff;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.L_col1.setObjectName("L_col1")
         self.L_col2 = QtWidgets.QLineEdit(self.frame)
@@ -72,6 +92,19 @@ class Ui_MainWindow(object):
         self.L_col2.setStyleSheet("QLineEdit{\n"
 "    background-color :#4da6ff;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.L_col2.setObjectName("L_col2")
         self.b_beam2 = QtWidgets.QLineEdit(self.frame)
@@ -81,8 +114,21 @@ class Ui_MainWindow(object):
         font.setBold(False)
         self.b_beam2.setFont(font)
         self.b_beam2.setStyleSheet("QLineEdit{\n"
-"    background-color : #b84dff;\n"
+"    background-color :#b84dff;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.b_beam2.setObjectName("b_beam2")
         self.h_beam2 = QtWidgets.QLineEdit(self.frame)
@@ -92,8 +138,21 @@ class Ui_MainWindow(object):
         font.setBold(False)
         self.h_beam2.setFont(font)
         self.h_beam2.setStyleSheet("QLineEdit{\n"
-"    background-color : #b84dff;\n"
+"    background-color :#b84dff;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.h_beam2.setObjectName("h_beam2")
         self.A_s2Top = QtWidgets.QLineEdit(self.frame)
@@ -105,6 +164,19 @@ class Ui_MainWindow(object):
         self.A_s2Top.setStyleSheet("QLineEdit{\n"
 "    background-color :#b84dff;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.A_s2Top.setObjectName("A_s2Top")
         self.A_s2Btm = QtWidgets.QLineEdit(self.frame)
@@ -116,6 +188,19 @@ class Ui_MainWindow(object):
         self.A_s2Btm.setStyleSheet("QLineEdit{\n"
 "    background-color :#b84dff;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.A_s2Btm.setObjectName("A_s2Btm")
         self.A_s1Top = QtWidgets.QLineEdit(self.frame)
@@ -127,6 +212,19 @@ class Ui_MainWindow(object):
         self.A_s1Top.setStyleSheet("QLineEdit{\n"
 "    background-color :#ff974d;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.A_s1Top.setObjectName("A_s1Top")
         self.A_s1Btm = QtWidgets.QLineEdit(self.frame)
@@ -138,6 +236,19 @@ class Ui_MainWindow(object):
         self.A_s1Btm.setStyleSheet("QLineEdit{\n"
 "    background-color :#ff974d;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.A_s1Btm.setObjectName("A_s1Btm")
         self.h_beam1 = QtWidgets.QLineEdit(self.frame)
@@ -149,6 +260,19 @@ class Ui_MainWindow(object):
         self.h_beam1.setStyleSheet("QLineEdit{\n"
 "    background-color :#ff974d;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.h_beam1.setReadOnly(False)
         self.h_beam1.setObjectName("h_beam1")
@@ -161,6 +285,19 @@ class Ui_MainWindow(object):
         self.b_beam1.setStyleSheet("QLineEdit{\n"
 "    background-color :#ff974d;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.b_beam1.setObjectName("b_beam1")
         self.x = QtWidgets.QLineEdit(self.frame)
@@ -170,10 +307,22 @@ class Ui_MainWindow(object):
         font.setBold(False)
         self.x.setFont(font)
         self.x.setStyleSheet("QLineEdit{\n"
-"    background-color : #41e0c6;\n"
+"    background-color :#41e0c6;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
 "}\n"
-"")
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
+"}")
         self.x.setObjectName("x")
         self.b_column1 = QtWidgets.QLineEdit(self.frame)
         self.b_column1.setGeometry(QtCore.QRect(808, 605, 92, 25))
@@ -184,6 +333,19 @@ class Ui_MainWindow(object):
         self.b_column1.setStyleSheet("QLineEdit{\n"
 "    background-color :#41e0c6;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.b_column1.setObjectName("b_column1")
         self.h_column1 = QtWidgets.QLineEdit(self.frame)
@@ -193,8 +355,21 @@ class Ui_MainWindow(object):
         font.setBold(False)
         self.h_column1.setFont(font)
         self.h_column1.setStyleSheet("QLineEdit{\n"
-"    background-color : #41e0c6;\n"
+"    background-color :#41e0c6;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.h_column1.setObjectName("h_column1")
         self.label_14 = QtWidgets.QLabel(self.frame)
@@ -222,6 +397,19 @@ class Ui_MainWindow(object):
         self.d_beam1.setStyleSheet("QLineEdit{\n"
 "    background-color :#ff974d;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.d_beam1.setObjectName("d_beam1")
         self.d_beam2 = QtWidgets.QLineEdit(self.frame)
@@ -233,10 +421,23 @@ class Ui_MainWindow(object):
         self.d_beam2.setStyleSheet("QLineEdit{\n"
 "    background-color :#b84dff;\n"
 "    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color :#e1e1e1;\n"
+"    border-radius:4px;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.d_beam2.setObjectName("d_beam2")
         self.label_8 = QtWidgets.QLabel(self.frame)
-        self.label_8.setGeometry(QtCore.QRect(572, 610, 91, 61))
+        self.label_8.setGeometry(QtCore.QRect(572, 640, 91, 61))
         self.label_8.setStyleSheet("QLabel{\n"
 "    background-color : #fff;\n"
 "}")
@@ -290,9 +491,21 @@ class Ui_MainWindow(object):
         font.setBold(False)
         self.f_y.setFont(font)
         self.f_y.setStyleSheet("QLineEdit{\n"
+"    background-color :#18a5b8;\n"
+"    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 2px solid #0178d6 ;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.f_y.setObjectName("f_y")
         self.gridLayout.addWidget(self.f_y, 0, 2, 1, 1)
@@ -315,9 +528,21 @@ class Ui_MainWindow(object):
         font.setBold(False)
         self.f_c.setFont(font)
         self.f_c.setStyleSheet("QLineEdit{\n"
+"    background-color :#18a5b8;\n"
+"    border-radius:4px;\n"
+"    selection-color: rgb(0, 0, 0);\n"
+"    selection-background-color: #74ed8c;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"    background-color: #5abbe8;\n"
+"    border: 2px solid #ff26f8;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
 "    background-color :#e1e1e1;\n"
 "    border-radius:4px;\n"
-"    border : 2px solid #0178d6 ;\n"
+"    border : 3px solid #ff0015;\n"
 "}")
         self.f_c.setObjectName("f_c")
         self.gridLayout_2.addWidget(self.f_c, 0, 1, 1, 1)
@@ -709,25 +934,20 @@ class Ui_MainWindow(object):
         self.horizontalLayout_30.addWidget(self.ratio)
         self.verticalLayout_3.addLayout(self.horizontalLayout_30)
         self.tabWidget.addTab(self.output, "")
-        self.label_38 = QtWidgets.QLabel(self.centralwidget)
-        self.label_38.setGeometry(QtCore.QRect(10, 730, 46, 24))
-        font = QtGui.QFont()
-        font.setPointSize(15)
-        self.label_38.setFont(font)
-        self.label_38.setObjectName("label_38")
+        self.gridLayout_4.addWidget(self.tabWidget, 0, 0, 1, 4)
         self.label_23 = QtWidgets.QLabel(self.centralwidget)
-        self.label_23.setGeometry(QtCore.QRect(1000, 720, 500, 34))
         font = QtGui.QFont()
-        font.setPointSize(15)
-        font.setBold(True)
+        font.setPointSize(16)
+        font.setBold(False)
         self.label_23.setFont(font)
         self.label_23.setObjectName("label_23")
+        self.gridLayout_4.addWidget(self.label_23, 1, 3, 1, 1)
         self.label_40 = QtWidgets.QLabel(self.centralwidget)
-        self.label_40.setGeometry(QtCore.QRect(680, 720, 117, 28))
         font = QtGui.QFont()
-        font.setPointSize(17)
+        font.setPointSize(20)
         self.label_40.setFont(font)
         self.label_40.setObjectName("label_40")
+        self.gridLayout_4.addWidget(self.label_40, 1, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -763,6 +983,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Joint Shear"))
+        self.label_38.setText(_translate("MainWindow", "V 1.2"))
         self.input.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.label.setText(_translate("MainWindow", "<html><head/><body><p><img width=\"1500\" height=\"900\" src=\":/input-img/joint img.jpg\"/></p></body></html>"))
         self.L_col1.setPlaceholderText(_translate("MainWindow", "L Col1 =? (cm)"))
@@ -827,7 +1048,6 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">φV</span><span style=\" font-size:22pt; vertical-align:sub;\">n</span><span style=\" font-size:18pt;\"> (ton) =</span></p></body></html>"))
         self.label_30.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:18pt;\">Ratio =</span></p></body></html>"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.output), _translate("MainWindow", "Output Data"))
-        self.label_38.setText(_translate("MainWindow", "V 1.2"))
         self.label_23.setText(_translate("MainWindow", "نوشته شده توسط مهدی و محمدرضا مومنی آبخارکی"))
         self.label_40.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#5555ff;\">ACI 318-19</span></p></body></html>"))
 import img_rc
